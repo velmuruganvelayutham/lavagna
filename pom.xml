@@ -108,7 +108,11 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.10</version>
 		</dependency>
-
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+   			<artifactId>commons-collections4</artifactId>
+		    <version>4.1</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -216,7 +220,7 @@
 			<artifactId>postgresql</artifactId>
 			<version>9.4.1208.jre7</version>
 		</dependency>
-		
+
 		<dependency>
         	<groupId>com.zaxxer</groupId>
         	<artifactId>HikariCP</artifactId>
@@ -228,7 +232,7 @@
 			<artifactId>urlrewritefilter</artifactId>
 			<version>4.0.4</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
@@ -241,20 +245,20 @@
 			<version>1.16.8</version>
 			<scope>provided</scope>
 		</dependency>
-        
+
         <!--  -->
         <!-- for the embedded war, the dependency are loaded by the repackage goal of spring-boot-maven-plugin -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
             <version>${org.eclipse.jetty.version}</version>
-            <scope>provided</scope> 
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-annotations</artifactId>
             <version>${org.eclipse.jetty.version}</version>
-            <scope>provided</scope> 
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty.websocket</groupId>
@@ -269,7 +273,6 @@
             <scope>provided</scope>
         </dependency>
         <!--  -->
-
 		<dependency>
 			<groupId>org.mnode.ical4j</groupId>
 			<artifactId>ical4j</artifactId>
@@ -285,13 +288,19 @@
                 </exclusion>
             </exclusions>
 		</dependency>
+        <!--  -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.14</version>
+        </dependency>
 	</dependencies>
 
 	<!-- -->
 	<properties>
-		<org.apache.logging.log4j.version>2.5</org.apache.logging.log4j.version>
+		<org.apache.logging.log4j.version>2.6</org.apache.logging.log4j.version>
 		<org.springframework.version>4.2.6.RELEASE</org.springframework.version>
-		<org.eclipse.jetty.version>9.2.16.v20160414</org.eclipse.jetty.version>
+		<org.eclipse.jetty.version>9.2.17.v20160517</org.eclipse.jetty.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.sources>src/main</sonar.sources>
 	</properties>
